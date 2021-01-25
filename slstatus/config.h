@@ -62,8 +62,20 @@ static const char unknown_str[] = "n/a";
  * wifi_essid          WiFi ESSID                      interface name (wlan0)
  */
 static const struct arg args[] = {
+
+/*	I'm using scripts from my personal-dot-files repo  
+	just download them, make them executable and put them in /usr/local bin		*/
+
 	/* function format          argument */
-	{ cpu_perc,	" %s%% |", NULL },
+	{ run_command,	"%2s |", "cpu.sh" },
+    	{ run_command,	"%2s |", "memory.sh" },
+    	{ run_command,	"%2s |", "hdd.sh" },
+	{ run_command,	"%2s |", "network.sh" },
+	{ run_command,	"%s |", "vol.sh " },
+	{ run_command,	"%10s ", "weatherbar.sh " },
+	{ run_command,	"%2s |", "clock.sh" },
+	
+/*	{ cpu_perc,	" %s%% |", NULL },
 	{ ram_perc,	" %s%% |", NULL },
 	{ disk_perc,	" %s%% |", "/home/mike/" },
 	{ ipv4,		" %2s |", "eth0" },
@@ -71,5 +83,7 @@ static const struct arg args[] = {
 	{ run_command,	" %2s |", "amixer sget Master | grep Right | grep % | sed 's/[][]//g' | awk '{print $5}' " },
 	{ run_command,	" %2s ", "sed 20q ~/.config/weather.txt | grep value | awk '{print $2 $3}' | sed 's/\"//g' " },
 	{ run_command,	"%2s |", "grep temp_F ~/.config/weather.txt | awk '{print $2}' | sed 's/\"//g' | sed 's/,/F/g' " },
-	{ datetime, "%s",           "%a, %b  %d %R" },
+	{ datetime, "%s",           "%a, %b  %d %R" }, */
+	
+
 };
