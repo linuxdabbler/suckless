@@ -16,9 +16,11 @@ the /usr/local namespace by default).
 Afterwards enter the following command to build and install dmenu
 (if necessary as root):
 
-    make clean install
-
-
-Running dmenu
--------------
-See the man page for details.
+   make clean install is not recommended on Debian without changing the MakeFile
+   
+   symlinks are recommended. 
+   
+   sudo ln -sf /path/to/dmenu/dmenu /usr/local/bin
+   sudo ln -sf /path/to/dmenu/dmenu_run /usr/local/bin
+   sudo ln -sf /path/to/dmenu/dmenu_path /usr/local/bin
+   sudo ln -sf /path/to/dmenu/stest /usr/local/bin
