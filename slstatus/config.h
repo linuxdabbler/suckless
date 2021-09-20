@@ -67,7 +67,7 @@ static const struct arg args[] = {
 	just download them, make them executable and put them in /usr/local bin		*/
 
 	/* function format          argument */
-	{ run_command,	"^c#cc6666^ %2s", "cpuicon.sh " },
+	{ run_command,	"^c#cc6666^ %s", "cpuicon.sh " },
 	{ cpu_perc,	"^c#c5c8c6^ %s%% ", NULL },
 
    	{ run_command,	"^c#b5bd68^ %2s ", "memicon.sh"  },
